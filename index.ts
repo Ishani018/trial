@@ -1,4 +1,9 @@
+import 'react-native-gesture-handler';
 import { registerRootComponent } from 'expo';
+import { enableScreens } from 'react-native-screens';
+
+// Try to work around the "large" font size issue
+enableScreens(true);
 
 import App from './App';
 

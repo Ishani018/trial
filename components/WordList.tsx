@@ -11,13 +11,14 @@ export const WordList: React.FC<WordListProps> = ({ words, foundWords }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Find these words:</Text>
+      <Text allowFontScaling={false} style={styles.title}>Find these words:</Text>
       <View style={styles.wordContainer}>
         {words.map((word, index) => {
           const isFound = foundSet.has(word.toUpperCase());
           return (
             <View key={index} style={styles.wordItem}>
               <Text
+                allowFontScaling={false}
                 style={[
                   styles.word,
                   isFound && styles.wordFound,
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: '700' as any,
     color: '#FF6B9D',
     marginBottom: 12,
     textAlign: 'center',
@@ -67,7 +68,7 @@ const styles = StyleSheet.create({
   },
   word: {
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: '700' as any,
     color: '#4A90E2',
   },
   wordFound: {

@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   letter: {
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: '700' as any,
     color: '#2C3E50',
   },
   letterSelected: {
